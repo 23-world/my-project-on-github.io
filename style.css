@@ -1,0 +1,173 @@
+body {
+    background-image: url(Images/fon.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(Images/header.jpg);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap; /* Позволяет тексту и навигации быть на одной линии */
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    flex: 1; /* Позволяет заголовку занимать оставшееся пространство */
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    background-image: url(Images/section.jpg);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1.4em;
+    line-height: 1.6;
+    max-width: 80%;
+}
+
+p {
+    color: #ffffff;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    justify-content: center;
+    gap: 15px; /* Пробел между изображениями */
+    margin: 20px auto;
+    flex-wrap: wrap; /* Позволяем перенос изображений на новую строку при необходимости */
+}
+
+.image-container img {
+    width: 100%; /* Используем 100% ширины контейнера */
+    max-width: 30%; /* Ограничиваем максимальную ширину изображений для 3-х в строке */
+    height: auto; /* Сохраняем пропорции изображений */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.large-img {
+    width: auto; /* Изменено на auto для сохранения пропорций */
+    max-width: 100%; /* Максимальная ширина 100% */
+    height: auto; /* Сохраняем пропорции */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #130113;
+    padding: 20px 0;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Горизонтальное расположение на меньших экранах */
+        align-items: center; /* Выравнивание по центру */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-right: 10px; /* Добавляем отступ справа для навигации */
+    }
+
+    nav ul {
+        flex-direction: row; /* Делаем навигацию горизонтальной */
+        gap: 10px; /* Уменьшаем пробел между элементами навигации */
+        margin-left: 0;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 95%;
+        font-size: 1.2em;
+    }
+
+    .image-container {
+        gap: 10px;
+        justify-content: space-around; /* Центрируем изображения */
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
+
+/* Дополнительная адаптация для экранов меньшего размера */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    section {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .image-container {
+        flex-direction: row; /* Горизонтальное расположение изображений на маленьких экранах */
+        justify-content: center; /* Центрируем изображения */
+        gap: 5px; /* Уменьшаем пробел между изображениями */
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 0.75em;
+    }
+}
+
+/* Оптимизация изображений */
+img {
+    object-fit: cover; /* Обеспечивает покрытие изображениями контейнеров */
+    max-width: 100%; /* Ограничивает ширину изображений */
+}
